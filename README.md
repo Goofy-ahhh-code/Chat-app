@@ -1,6 +1,6 @@
-# Chat app with C and python
+# Reverse shell with C and python
 
-This is a proof of concept chat app utilizing C and python with the sockets library
+This is a proof of reverse shell utilizing C and python with the sockets library
 
 ```bash
 # compile C code
@@ -11,9 +11,6 @@ gcc main.c -o server
 
 # run python client
 python3 main.py
-
-# or just
-python3 setup.py
 ```
 # To use
 
@@ -21,7 +18,7 @@ First, find your LAN Internet Protocol (IP) address with the linux command:
 ```bash
 ip addr show
 ```
-then run setup.py on both machines:
+then run ./server {port} on the victim:
 ```bash
-python3 setup.py
+python3 main.py
 ```
