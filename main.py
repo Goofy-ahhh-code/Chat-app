@@ -21,5 +21,6 @@ message = ""
 while message != "end":
   message = input("Enter your message: ")
   s.send(f"{user}: {message}".encode())
-
+  response = s.recv(4096).decode()
+  print(response)
 s.close()
